@@ -7,12 +7,12 @@ import Logos from '@/components/sections/logos';
 import Portfolio from '@/components/sections/portfolio';
 export default function Home() {
   return (
-      <main className="">
-        <HomeHero />
-        <TestimonialsGrid />
-        <Skills />
-        <Logos />
-        <Portfolio />
-      </main>
+    <main>
+      <HomeHero />
+      <TestimonialsGrid />
+      <Skills />
+      <Logos />
+      <Portfolio />
+    </main >
   );
 }
