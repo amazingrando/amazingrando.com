@@ -1,6 +1,6 @@
 {
-  "name": "dungeonmaster.design",
-  "version": "0.1.0",
+  "name": "randyoest.com",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
