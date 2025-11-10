@@ -1,23 +1,171 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@import "../assets/stylesheets/general-sans.css";
+@import "../assets/stylesheets/general-sans.css" layer(utilities);
+
+@plugin 'tailwindcss-animate';
+@plugin '@tailwindcss/typography';
 
 @source inline("col-span-1, col-span-2, col-span-3");
 
-body {
-  @apply bg-ash-200;
-  font-family: Arial, Helvetica, sans-serif;
-  background-image: radial-gradient(theme("colors.ash.400") 1px, transparent 0);
-  background-size: 30px 30px;
-  background-position: 0px 0px;
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --animate-come-in-out: comeInOut 700ms forwards;
+  --animate-spin: spin 1000ms linear forwards;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --color-highlight: var(--highlight);
+  --color-loop: var(--loop);
+
+  --color-blue-100: hsla(223, 90%, 96%, 1);
+  --color-blue-200: hsla(225, 95%, 92%, 1);
+  --color-blue-300: hsla(225, 95%, 85%, 1);
+  --color-blue-400: hsla(224, 95%, 77%, 1);
+  --color-blue-500: hsla(224, 94%, 69%, 1);
+  --color-blue-600: hsla(225, 94%, 60%, 1);
+  --color-blue-700: hsla(225, 66%, 48%, 1);
+  --color-blue-800: hsla(225, 66%, 37%, 1);
+  --color-blue-900: hsla(224, 66%, 25%, 1);
+  --color-blue-1000: hsla(225, 65%, 15%, 1);
+
+  --color-orange-100: hsla(35, 100%, 95%, 1);
+  --color-orange-200: hsla(36, 100%, 91%, 1);
+  --color-orange-300: hsla(36, 100%, 81%, 1);
+  --color-orange-400: hsla(35, 100%, 72%, 1);
+  --color-orange-500: hsla(36, 100%, 63%, 1);
+  --color-orange-600: hsla(36, 100%, 54%, 1);
+  --color-orange-700: hsla(36, 87%, 43%, 1);
+  --color-orange-800: hsla(35, 87%, 32%, 1);
+  --color-orange-900: hsla(36, 87%, 21%, 1);
+  --color-orange-1000: hsla(36, 85%, 11%, 1);
+
+  --color-ash-50: hsla(240, 7%, 98%, 1);
+  --color-ash-100: hsla(240, 7%, 95%, 1);
+  --color-ash-200: hsla(240, 7%, 89%, 1);
+  --color-ash-300: hsla(240, 7%, 77%, 1);
+  --color-ash-400: hsla(240, 6%, 66%, 1);
+  --color-ash-500: hsla(240, 6%, 55%, 1);
+  --color-ash-600: hsla(240, 9%, 43%, 1);
+  --color-ash-700: hsla(240, 8%, 35%, 1);
+  --color-ash-800: hsla(240, 8%, 26%, 1);
+  --color-ash-900: hsla(240, 9%, 17%, 1);
+  --color-ash-1000: hsla(240, 9%, 9%, 1);
+
+  --color-adamantine-blue-100: hsla(205, 100%, 96%, 1);
+  --color-adamantine-blue-200: hsla(205, 100%, 93%, 1);
+  --color-adamantine-blue-300: hsla(205, 100%, 85%, 1);
+  --color-adamantine-blue-400: hsla(205, 100%, 78%, 1);
+  --color-adamantine-blue-500: hsla(205, 100%, 70%, 1);
+  --color-adamantine-blue-600: hsla(205, 100%, 63%, 1);
+  --color-adamantine-blue-700: hsla(205, 60%, 50%, 1);
+  --color-adamantine-blue-800: hsla(205, 59%, 38%, 1);
+  --color-adamantine-blue-900: hsla(205, 59%, 25%, 1);
+  --color-adamantine-blue-1000: hsla(205, 59%, 13%, 1);
+
+  --color-yellow-50: hsla(52, 92%, 95%, 1);
+  --color-yellow-100: hsla(51, 91%, 87%, 1);
+  --color-yellow-200: hsla(51, 89%, 79%, 1);
+  --color-yellow-300: hsla(51, 88%, 71%, 1);
+  --color-yellow-400: hsla(50, 87%, 63%, 1);
+  --color-yellow-500: hsla(50, 86%, 55%, 1);
+  --color-yellow-600: hsla(50, 84%, 47%, 1);
+  --color-yellow-700: hsla(50, 83%, 38%, 1);
+  --color-yellow-800: hsla(50, 81%, 30%, 1);
+  --color-yellow-900: hsla(50, 79%, 22%, 1);
+  --color-yellow-1000: hsla(50, 77%, 14%, 1);
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --font-base: GeneralSans-Variable, system-ui, sans-serif;
+
+  --z-index-header: 100;
+
+  @keyframes comeInOut {
+    0%,
+    100% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1);
+    }
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@layer utilities {
+  body {
+    @apply bg-ash-200;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: radial-gradient(var(--color-ash-400) 1px, transparent 0);
+    background-size: 30px 30px;
+    background-position: 0px 0px;
+  }
 }
 
 @layer base {
   :root {
-    --background: theme("colors.ash.100");
-    --foreground: theme("colors.ash.800");
+    --background: var(--color-ash-100);
+    --foreground: var(--color-ash-800);
     --card: hsl(0 0% 100%);
     --card-foreground: hsl(0 0% 3.9%);
     --popover: hsl(0 0% 100%);
@@ -28,14 +176,14 @@ body {
     --secondary-foreground: hsl(0 0% 9%);
     --muted: hsl(0 0% 96.1%);
     --muted-foreground: hsl(0 0% 45.1%);
-    --accent: theme("colors.ash.50");
-    --accent-foreground: theme("colors.ash.800");
+    --accent: var(--color-ash-50);
+    --accent-foreground: var(--color-ash-800);
     --destructive: hsl(0 84.2% 60.2%);
     --destructive-foreground: hsl(0 0% 98%);
     --border: hsl(0 0% 89.8%);
     --input: hsl(0 0% 89.8%);
     --highlight: hsla(43 74% 66% / 0.3);
-    --loop: theme("colors.yellow.600");
+    --loop: var(--color-yellow-600);
     --ring: hsl(0 0% 3.9%);
     --chart-1: hsl(12 76% 61%);
     --chart-2: hsl(173 58% 39%);
@@ -113,5 +261,18 @@ body {
       black 13px,
       black 26px
     );
+  }
+}
+
+@media (width >= 64rem) {
+  .skills-card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px 50px 50px 1fr;
+    grid-template-areas:
+      ". . . four"
+      ". . three four"
+      ". two three four"
+      "one two three four";
   }
 }

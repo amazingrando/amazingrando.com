@@ -15,7 +15,7 @@ const ScreenshotPlayer: React.FC<ScreenshotPlayerProps> = ({ title, src }) => (
       'not-prose ml-[50%] -translate-x-1/2',
     )}
   >
-    <div className="!m-0 relative text-center">
+    <div className="m-0! relative text-center">
       <span className="hidden tracking-[.2em] absolute left-0 top-1 text-xs md:text-base">
         🔴🟡🟢
       </span>
@@ -24,7 +24,7 @@ const ScreenshotPlayer: React.FC<ScreenshotPlayerProps> = ({ title, src }) => (
       </span>
     </div>
     <div className="max-h-[70dvh] overflow-y-scroll">
-      <Image src={src} alt={title} className="!m-0 w-full" />
+      <Image src={src} alt={title} className="m-0! w-full" />
     </div>
   </figure>
 );
@@ -62,7 +62,7 @@ export function Screenshot({ className, classes, title, src }: ScreenshotProps) 
       </div>
       <div className={classNames('bg-white rounded', classes?.content)}>
         <div className="max-h-[70dvh] overflow-y-scroll">
-          <Image src={src} alt={title} className="!m-0 w-full" />
+          <Image src={src} alt={title} className="m-0! w-full" />
         </div>
       </div>
     </div>

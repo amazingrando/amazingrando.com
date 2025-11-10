@@ -56,7 +56,7 @@ const ProjectCard = ({
           {title}{' '}
           <FontAwesomeIcon
             icon={faArrowRightLong}
-            className="!hidden lg:block text-xl transition-all group-hover:ml-2 group-hover:text-blue-200"
+            className="hidden! lg:block text-xl transition-all group-hover:ml-2 group-hover:text-blue-200"
           />
         </Link>
       </h2>
@@ -68,9 +68,9 @@ const ProjectCard = ({
 
 const Portfolio = () => {
   return (
-    <div id="portfolio"className="px-4 sm:px-8 md:px-16 py-16 bg-gradient-to-b from-blue-950 to-blue-900 text-blue-100">
+    <div id="portfolio"className="px-4 sm:px-8 md:px-16 py-16 bg-linear-to-b from-blue-950 to-blue-900 text-blue-100">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-6xl md:text-6xl lg:text-7xl font-medium text-balance mb-16 bg-gradient-to-r from-blue-100 to-blue-200 text-transparent bg-clip-text">
+        <h2 className="text-6xl md:text-6xl lg:text-7xl font-medium text-balance mb-16 bg-linear-to-r from-blue-100 to-blue-200 text-transparent bg-clip-text">
           Portfolio
         </h2>
 
@@ -84,7 +84,7 @@ const Portfolio = () => {
           ))}
         </section>
 
-        <h2 className="text-3xl font-semibold mb-12 bg-gradient-to-r from-blue-100 to-blue-200 text-transparent bg-clip-text">
+        <h2 className="text-3xl font-semibold mb-12 bg-linear-to-r from-blue-100 to-blue-200 text-transparent bg-clip-text">
           Hobby projects
         </h2>
         <section className="grid grid-cols-1 lg:grid-cols-3 gap-20 lg:gap-12">

@@ -23,7 +23,7 @@ export default async function Principles() {
                 "relative flex h-full flex-col overflow-hidden justify-center",
                 "rounded-sm",
                 "font-semibold text-balance text-yellow-900",
-                "inset-px rounded-lg ring-1 shadow-sm ring-yellow-700",
+                "inset-px rounded-lg ring-1 shadow-xs ring-yellow-700",
                 principle.textSize === 'sm' ? "text-sm" : "",
                 principle.textSize === 'base' ? "text-base" : "",
                 principle.textSize === 'lg' ? "text-lg" : "",

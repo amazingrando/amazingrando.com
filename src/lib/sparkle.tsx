@@ -219,7 +219,7 @@ const Sparkle: React.FC<SparkleProps> = React.memo(({ size, color, style }) => {
 
   return (
     <div
-      className="absolute animate-comeInOut"
+      className="absolute animate-come-in-out"
       style={style}
     >
       <svg

@@ -14,12 +14,12 @@ const Header = () => {
           <Image
             src={Randy}
             alt="Randy"
-            className="w-[4rem] h-[4rem] top-[6px] relative -ml-[0.7rem]"
+            className="w-16 h-16 top-[6px] relative -ml-[0.7rem]"
           />
           <div>
             <h1 className="uppercase text-xl md:text-2xl font-bold">
               <span>
-                <Emphasis className="w-[6rem] h-[1.5rem] text-blue-600" />
+                <Emphasis className="w-24 h-6 text-blue-600" />
                 Amazing{' '}
               </span>
               Rando

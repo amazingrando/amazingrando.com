@@ -18,49 +18,37 @@ export const logos = [
   {
     logo: colombia,
     name: 'Colombia',
-    colSpan: 'col-span-3',
-    rowSpan: 'row-span-1'
-  },
-  {
-    logo: fourKitchens,
-    name: 'Four Kitchens',
-    colSpan: 'col-span-3',
-    rowSpan: 'row-span-1'
-  },
-  {
-    logo: ithaca,
-    name: 'Ithaca College',
-    colSpan: 'col-span-3',
+    colSpan: 'col-span-1',
     rowSpan: 'row-span-1'
   },
   {
     logo: nyu,
     name: 'NYU',
-    colSpan: 'col-span-2',
+    colSpan: 'col-span-1',
     rowSpan: 'row-span-1'
   },
   {
     logo: smithCollege,
     name: 'Smith College',
-    colSpan: 'col-span-3',
+    colSpan: 'col-span-1',
     rowSpan: 'row-span-1'
   },
   {
     logo: stanford,
     name: 'Stanford',
-    colSpan: 'col-span-3',
+    colSpan: 'col-span-1',
     rowSpan: 'row-span-1'
   },
   {
     logo: yale,
     name: 'Yale',
-    colSpan: 'col-span-2',
+    colSpan: 'col-span-1',
     rowSpan: 'row-span-1'
   },
   {
     logo: emulsify,
     name: 'Emulsify',
-    colSpan: 'col-span-2',
+    colSpan: 'col-span-1',
     rowSpan: 'row-span-1'
   },
   {
@@ -72,7 +60,7 @@ export const logos = [
   {
     logo: harvard,
     name: 'Harvard',
-    colSpan: 'col-span-2',
+    colSpan: 'col-span-1',
     rowSpan: 'row-span-1'
   },
   {
@@ -84,6 +72,12 @@ export const logos = [
   {
     logo: salesforce,
     name: 'Salesforce',
+    colSpan: 'col-span-1',
+    rowSpan: 'row-span-1'
+  },
+  {
+    logo: fourKitchens,
+    name: 'Four Kitchens',
     colSpan: 'col-span-1',
     rowSpan: 'row-span-1'
   },
