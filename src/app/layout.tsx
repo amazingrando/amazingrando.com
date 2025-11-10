@@ -9,8 +9,8 @@ import Fathom from '@/lib/fathom';
 config.autoAddCss = false;
 
 export const metadata: Metadata = {
-  title: "Randy Oest • I make the internet less ugly and more useful.",
-  description: "Let’s be honest: there’s a lot of bad design out there. I turn tangled content and messy ideas into clean experiences and thoughtful strategies.",
+  title: "Randy Oest • Make your website feel human, helpful, and delightful",
+  description: "Turning tangled content into clarity, messy ideas into strategy, and chaos into calm—all designed for impact and delivered with care.",
 };
 
 export default function RootLayout({
