@@ -7,6 +7,12 @@ import stanford from '@/assets/images/logos/stanford.svg';
 // import texasLawHelp from '@/assets/images/logos/texaslawhelp.svg';
 // import uft from '@/assets/images/logos/uft.svg';
 import yale from '@/assets/images/logos/yale.svg';
+import emulsify from '@/assets/images/logos/emulsify.svg';
+import baruch from '@/assets/images/logos/baruch.svg';
+import harvard from '@/assets/images/logos/harvard.svg';
+import intuit from '@/assets/images/logos/intuit.svg';
+import salesforce from '@/assets/images/logos/salesforce.svg';
+import wqed from '@/assets/images/logos/wqed.svg';
 
 export const logos = [
   {
@@ -49,6 +55,42 @@ export const logos = [
     logo: yale,
     name: 'Yale',
     colSpan: 'col-span-2',
+    rowSpan: 'row-span-1'
+  },
+  {
+    logo: emulsify,
+    name: 'Emulsify',
+    colSpan: 'col-span-2',
+    rowSpan: 'row-span-1'
+  },
+  {
+    logo: baruch,
+    name: 'Baruch College',
+    colSpan: 'col-span-1',
+    rowSpan: 'row-span-1'
+  },
+  {
+    logo: harvard,
+    name: 'Harvard',
+    colSpan: 'col-span-2',
+    rowSpan: 'row-span-1'
+  },
+  {
+    logo: intuit,
+    name: 'Intuit',
+    colSpan: 'col-span-1',
+    rowSpan: 'row-span-1'
+  },
+  {
+    logo: salesforce,
+    name: 'Salesforce',
+    colSpan: 'col-span-1',
+    rowSpan: 'row-span-1'
+  },
+  {
+    logo: wqed,
+    name: 'WQED',
+    colSpan: 'col-span-1',
     rowSpan: 'row-span-1'
   },
   
