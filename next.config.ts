@@ -19,7 +19,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/chat',
-        destination: 'https://calendar.notion.so/meet/amazingrando/ypel24omo',
+        destination: 'https://calendar.notion.so/meet/amazingrando/30min',
         permanent: true,
       },
     ]
