@@ -70,7 +70,7 @@ export const testimonials: TestimonialProps[] = [
     author: "Ashley Hitson",
     role: " Lead UI/UX Designer | Accessibility Advocate",
     avatar: "/images/avatars/ashleyhitson.jpg",
-    linkedin: "https://www.linkedin.com/in/nicalorber"
+    linkedin: "https://www.linkedin.com/in/hitson/"
   },
   {
     quote: "Beyond his leadership, Randy is a true Notion and Figma wizard, effortlessly organizing, strategizing, and bringing creative visions to life. <span class='highlight'>His ability to bridge the gap between structure and creativity makes him an invaluable asset</span> to any team.",
