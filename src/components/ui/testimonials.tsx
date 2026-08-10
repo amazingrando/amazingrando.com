@@ -16,6 +16,7 @@ export interface TestimonialProps {
   linkedin: string;
   rotation?: number;
   className?: string;
+  showQuote?: boolean;
 }
 
 export function Testimonial({ quote, author, role, avatar, linkedin, style, rotation = 0, className = '' }: TestimonialProps) {

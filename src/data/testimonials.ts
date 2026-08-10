@@ -23,6 +23,13 @@ export const testimonials: TestimonialProps[] = [
     linkedin: "https://linkedin.com/in/patrick-bagwell"
   },
   {
+    quote: "Randy could give a master class on how to be <span class='highlight'>the most responsive contractor to partner with</span>. 10/10 in the amazing human category!",
+    author: "Megan Leary-Crist",
+    role: "Founder at Rudder",
+    avatar: "/images/avatars/megan-leary-crist.jpeg",
+    linkedin: "https://www.linkedin.com/in/thereframe/"
+  },
+  {
     quote: "Randy is <span class='highlight'>great with clients</span>, delivers designs that are admired, can be relied upon in stressful situations to bring calm, and is great in a sales pitch!",
     author: "Suzy Bates",
     role: "Senior Program Manager for Marketing Strategy at Cloudflare, Inc.",
@@ -63,7 +70,8 @@ export const testimonials: TestimonialProps[] = [
     author: "Nica Lorber",
     role: "Strategy and Design Consultant",
     avatar: "/images/avatars/nicalorber.jpg",
-    linkedin: "https://www.linkedin.com/in/nicalorber"
+    linkedin: "https://www.linkedin.com/in/nicalorber",
+    showQuote: false,
   },
   {
     quote: "Randy [as a leader] makes space for people to thrive on their own. <span class='highlight'>Whenever I ever felt stuck, I could count on Randy to guide me to an answer.</span>",
