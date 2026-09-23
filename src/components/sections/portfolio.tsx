@@ -4,7 +4,7 @@ import { faArrowRightLong } from '@fortawesome/pro-regular-svg-icons';
 import { projects, smallerProjects } from '@/data/projects';
 import Link from 'next/link';
 import classNames from 'classnames';
-import * as Fathom from 'fathom-client';
+import { trackEvent } from '@/lib/analytics';
 
 interface ProjectCardProps {
   title: string;
@@ -35,7 +35,7 @@ const ProjectCard = ({
         'md:basis-[150px] ': size === 'default',
         'md:basis-[100px]': size === 'small'
       }, 'md:shrink-0 md:grow-0 float-end md:float-none ms-6 md:ms-0')}
-      onClick={() => { Fathom.trackEvent(`Project link: ${trackingName}`);}}
+      onClick={() => { trackEvent(`Project link: ${trackingName}`);}}
     >
       <Image
         src={imageSrc}
@@ -52,7 +52,7 @@ const ProjectCard = ({
         'text-xl md:text-2xl font-semibold mb-2 leading-tight text-balance group': size === 'default',
         'text-lg md:text-xl font-semibold mb-2 leading-tight text-balance group': size === 'small'
       })}>
-        <Link href={url} className="transition-all group-hover:text-blue-200" onClick={() => { Fathom.trackEvent(`Project link: ${trackingName}`);}}>
+        <Link href={url} className="transition-all group-hover:text-blue-200" onClick={() => { trackEvent(`Project link: ${trackingName}`);}}>
           {title}{' '}
           <FontAwesomeIcon
             icon={faArrowRightLong}
