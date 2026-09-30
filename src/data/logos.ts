@@ -1,3 +1,4 @@
+import adobe from '@/assets/images/logos/adobe.svg';
 import colombia from '@/assets/images/logos/colombia.svg';
 import fourKitchens from '@/assets/images/logos/fourkitchens.svg';
 import nyu from '@/assets/images/logos/nyu.svg';
@@ -12,6 +13,12 @@ import salesforce from '@/assets/images/logos/salesforce.svg';
 import wqed from '@/assets/images/logos/wqed.svg';
 
 export const logos = [
+  {
+    logo: adobe,
+    name: 'Adobe',
+    colSpan: 'col-span-1',
+    rowSpan: 'row-span-1'
+  },
   {
     logo: colombia,
     name: 'Colombia',
@@ -72,12 +79,12 @@ export const logos = [
     colSpan: 'col-span-1',
     rowSpan: 'row-span-1'
   },
-  {
-    logo: fourKitchens,
-    name: 'Four Kitchens',
-    colSpan: 'col-span-1',
-    rowSpan: 'row-span-1'
-  },
+  // {
+  //   logo: fourKitchens,
+  //   name: 'Four Kitchens',
+  //   colSpan: 'col-span-1',
+  //   rowSpan: 'row-span-1'
+  // },
   {
     logo: wqed,
     name: 'WQED',
