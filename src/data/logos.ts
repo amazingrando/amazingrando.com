@@ -1,6 +1,5 @@
 import adobe from '@/assets/images/logos/adobe.svg';
 import colombia from '@/assets/images/logos/colombia.svg';
-import fourKitchens from '@/assets/images/logos/fourkitchens.svg';
 import nyu from '@/assets/images/logos/nyu.svg';
 import smithCollege from '@/assets/images/logos/smith-college.svg';
 import stanford from '@/assets/images/logos/stanford.svg';
@@ -79,12 +78,6 @@ export const logos = [
     colSpan: 'col-span-1',
     rowSpan: 'row-span-1'
   },
-  // {
-  //   logo: fourKitchens,
-  //   name: 'Four Kitchens',
-  //   colSpan: 'col-span-1',
-  //   rowSpan: 'row-span-1'
-  // },
   {
     logo: wqed,
     name: 'WQED',
