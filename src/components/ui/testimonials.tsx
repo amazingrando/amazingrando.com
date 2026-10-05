@@ -1,7 +1,8 @@
 'use client';
 
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { motion } from 'motion/react';
 import { annotate } from 'rough-notation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
@@ -17,43 +18,45 @@ export interface TestimonialProps {
   rotation?: number;
   className?: string;
   showQuote?: boolean;
+  index?: number;
 }
 
-export function Testimonial({ quote, author, role, avatar, linkedin, style, rotation = 0, className = '' }: TestimonialProps) {
+export function Testimonial({ quote, author, role, avatar, linkedin, style, rotation = 0, className = '', index = 0 }: TestimonialProps) {
   const quoteRef = useRef<HTMLQuoteElement>(null);
+  const [highlightReady, setHighlightReady] = useState(false);
 
   useEffect(() => {
-    const highlights: HTMLElement[] = [];
-    if (quoteRef.current) {
-      quoteRef.current.querySelectorAll('.highlight').forEach((el) => {
-        highlights.push(el as HTMLElement);
-      });
+    if (!highlightReady || !quoteRef.current) return;
 
-      const annotations = highlights.map((highlight) =>
-        annotate(highlight, {
-          type: 'highlight',
-          color: '#fed7aa',
-          animationDuration: 800,
-          multiline: true,
-        })
-      );
+    const highlights = Array.from(
+      quoteRef.current.querySelectorAll<HTMLElement>('.highlight')
+    );
 
-      annotations.forEach(annotation => annotation.show());
+    const annotations = highlights.map((highlight) =>
+      annotate(highlight, {
+        type: 'highlight',
+        color: '#fed7aa',
+        animationDuration: 800,
+        multiline: true,
+      })
+    );
 
-      // Cleanup annotations on unmount
-      return () => {
-        annotations.forEach(annotation => annotation.remove());
-      };
-    }
-  }, []);
+    annotations.forEach((annotation) => annotation.show());
+
+    return () => {
+      annotations.forEach((annotation) => annotation.remove());
+    };
+  }, [highlightReady]);
 
   return (
-    <div 
+    <motion.div 
       className={`flex flex-col gap-4 p-6 bg-white rounded-lg shadow-lg ${className}`}
-      style={{ 
-        ...style,
-        transform: rotation ? `rotate(${rotation}deg)` : undefined
-      }}
+      style={{ ...style, rotate: rotation }}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.6, ease: 'easeOut', delay: (index % 3) * 0.1 }}
+      onAnimationComplete={() => setHighlightReady(true)}
     >
       <Pin 
         className="absolute -top-4 left-1/2 -translate-x-1/2 text-red-700" 
@@ -90,6 +93,6 @@ export function Testimonial({ quote, author, role, avatar, linkedin, style, rota
           <p className="text-xs lg:text-sm text-ash-700 text-balance">{role}</p>
         </div>
       </footer>
-    </div>
+    </motion.div>
   );
 } 
