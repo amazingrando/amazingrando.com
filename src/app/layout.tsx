@@ -4,7 +4,6 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { config } from '@fortawesome/fontawesome-svg-core';
-import Fathom from '@/lib/fathom';
 import Plausible from '@/lib/plausible';
 
 config.autoAddCss = false;
@@ -24,7 +23,6 @@ export default function RootLayout({
       <body
         className={`antialiased font-base text-slate-700`}
       >
-        <Fathom />
         <Plausible />
         <Header />
         {children}

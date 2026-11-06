@@ -27,7 +27,6 @@
     "class-variance-authority": "^0.7.1",
     "classnames": "^2.5.1",
     "clsx": "^2.1.1",
-    "fathom-client": "^3.7.2",
     "lucide-react": "^0.475.0",
     "motion": "^14.0.0",
     "next": "^15.5.9",
